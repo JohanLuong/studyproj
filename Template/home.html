@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+    <table>
+        {% for i in result %}
+            <tr> 
+                <td width="200">
+                    {{i.name}}
+                </td>
+                <td width="100">
+                    {{i.symbol}}
+                </td>
+                <td width="100">
+                    {{i.price_usd}}
+                </td>           
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
