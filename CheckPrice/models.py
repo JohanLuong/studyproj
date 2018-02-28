@@ -16,4 +16,4 @@ class PriceDB(models.Model):
     percent_change_1h = models.FloatField()
     percent_change_24h = models.FloatField()
     percent_change_7h = models.FloatField()
-    last_update = models.CharField(max_length=25)
+    last_update = models.CharField(max_length=25) #Timestamp format

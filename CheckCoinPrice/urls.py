@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from CheckPrice import views
+from CheckPrice import views as CheckPriceView
+from Search import views as SearchView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.GetPrice)
+    path('price/', CheckPriceView.GetPrice),
+    path('search-form/', SearchView.SearchForm),
+    #path('search/', SearchView.Search)
 ]
