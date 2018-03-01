@@ -22,5 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('price/', CheckPriceView.GetPrice),
     path('search-form/', SearchView.SearchForm),
-    #path('search/', SearchView.Search)
+    path('search/', SearchView.Search)
 ]

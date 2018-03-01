@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <title>RESULT</title>
+</head>
+<body>
+    {% if result %}
+        <p>You have searched for {{key}}</p>
+        <p>These result was checked on {{moment}}</p>
+        <ul>
+            {% for i in result %} <!-- result is a queryset of Python. You have to iterate throught it to view data. -->
+            <li>Coin: {{i.name}}</li>
+            <li>Price (USD): {{i.price_usd}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Error: Not Found.</p>
+    {% endif %}
+    <form action="/search-form/">
+        <input type="submit", value="Back">
+    </form>
+</body>
+</html>
